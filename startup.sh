@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Starting server..."
-/opt/mssql/bin/sqlserver & ./restore.sh
+/opt/mssql/bin/sqlservr & ./restore.sh

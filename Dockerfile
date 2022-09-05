@@ -7,7 +7,7 @@ ENV SA_PASSWORD=${SA_PASSWORD}
 WORKDIR /
 
 # COPY required files
-COPY ${BAK_FILE} ./adventureworks.bak
+COPY ${BAK_FILE} /var/opt/mssql/adventureworks.bak
 COPY ./restore.sh .
 COPY ./restore.sql .
 COPY ./startup.sh .

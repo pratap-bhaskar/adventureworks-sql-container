@@ -22,9 +22,9 @@ else
     echo "AdventureWorks light backup file already downloaded. Skipping."
 fi
 echo "Building OLTP docker image."
-docker build . -t pratapgowda/sql-2022-adventureworks:latest --build-arg BAK_FILE=./adventureworks.bak
-docker tag pratapgowda/sql-adventureworks:latest pratapgowda/sql-adventureworks:oltp
+docker build . -t pratapgowda/sql-adventureworks:2022-latest --build-arg BAK_FILE=./adventureworks.bak
+docker tag pratapgowda/sql-adventureworks:2022-latest pratapgowda/sql-adventureworks:2022-oltp
 echo "Building data warehouse docker image."
-docker build . -t pratapgowda/sql-2022-adventureworks:datawarehouse --build-arg BAK_FILE=./adventureworks-dw.bak
+docker build . -t pratapgowda/sql-adventureworks:2022-datawarehouse --build-arg BAK_FILE=./adventureworks-dw.bak
 echo "Building light docker image."
-docker build . -t pratapgowda/sql-2022-adventureworks:light --build-arg BAK_FILE=./adventureworks-light.bak
+docker build . -t pratapgowda/sql-adventureworks:2022-light --build-arg BAK_FILE=./adventureworks-light.bak
